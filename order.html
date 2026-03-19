@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexaHost — Commander</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="loader"><div class="loader-logo">Nexa<span>Host</span></div><div class="loader-ring"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28"/><circle class="arc" cx="32" cy="32" r="28"/></svg></div><div class="loader-bar"><div class="loader-fill"></div></div><div class="loader-text">Chargement...</div></div>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Nexa<span>Host</span></a>
+  <ul class="nav-links"><li><a href="index.html#particuliers">Offres</a></li><li><a href="index.html#contact">Contact</a></li></ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Thème">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a href="index.html" class="btn-nav">← Retour</a>
+  </div>
+</nav>
+
+<main class="order-page">
+  <!-- Steps -->
+  <div class="order-steps">
+    <div class="order-step active" id="step-tab-1"><span class="order-step-num">1</span><span>Configuration</span></div>
+    <div class="order-sep"></div>
+    <div class="order-step" id="step-tab-2"><span class="order-step-num">2</span><span>Compte</span></div>
+    <div class="order-sep"></div>
+    <div class="order-step" id="step-tab-3"><span class="order-step-num">3</span><span>Paiement</span></div>
+  </div>
+
+  <!-- ÉTAPE 1 : Configuration -->
+  <div class="order-panel active" id="order-step-1">
+    <h2 class="order-section-title">Choisissez votre offre</h2>
+    <div class="plan-grid" id="planGrid">
+      <div class="plan-option" data-plan="nano" data-price="1.99"><h4>VPS Nano</h4><div class="plan-price">1,99€<span style="font-size:.8rem;color:var(--muted)">/mois</span></div><div class="plan-specs">1 vCPU • 1 Go RAM<br/>20 Go SSD</div></div>
+      <div class="plan-option" data-plan="starter" data-price="3.99"><h4>VPS Starter</h4><div class="plan-price">3,99€<span style="font-size:.8rem;color:var(--muted)">/mois</span></div><div class="plan-specs">2 vCPU • 4 Go RAM<br/>50 Go SSD</div></div>
+      <div class="plan-option selected" data-plan="confort" data-price="8.99"><h4>VPS Confort ⭐</h4><div class="plan-price">8,99€<span style="font-size:.8rem;color:var(--muted)">/mois</span></div><div class="plan-specs">4 vCPU • 8 Go RAM<br/>120 Go SSD</div></div>
+      <div class="plan-option" data-plan="power" data-price="16.99"><h4>VPS Power</h4><div class="plan-price">16,99€<span style="font-size:.8rem;color:var(--muted)">/mois</span></div><div class="plan-specs">8 vCPU • 16 Go RAM<br/>250 Go SSD</div></div>
+      <div class="plan-option" data-plan="game-clan" data-price="12.99"><h4>Game Clan 🎮</h4><div class="plan-price">12,99€<span style="font-size:.8rem;color:var(--muted)">/mois</span></div><div class="plan-specs">8 vCPU HF • 16 Go RAM<br/>150 Go SSD</div></div>
+      <div class="plan-option" data-plan="business" data-price="49.99"><h4>Dédié Business</h4><div class="plan-price">49,99€<span style="font-size:.8rem;color:var(--muted)">/mois</span></div><div class="plan-specs">8 cœurs • 32 Go RAM<br/>500 Go NVMe</div></div>
+    </div>
+
+    <h2 class="order-section-title">Système d'exploitation</h2>
+    <div class="os-grid" id="osGrid">
+      <div class="os-option selected" data-os="ubuntu"><span class="os-icon">🟠</span>Ubuntu 24.04</div>
+      <div class="os-option" data-os="debian"><span class="os-icon">🔴</span>Debian 12</div>
+      <div class="os-option" data-os="centos"><span class="os-icon">🟣</span>AlmaLinux 9</div>
+      <div class="os-option" data-os="windows"><span class="os-icon">🔵</span>Windows Server</div>
+      <div class="os-option" data-os="custom"><span class="os-icon">⚙️</span>ISO Custom</div>
+    </div>
+
+    <h2 class="order-section-title">Localisation</h2>
+    <div class="loc-grid" id="locGrid">
+      <div class="loc-option selected" data-loc="paris"><span class="loc-flag">🇫🇷</span><strong>Paris</strong><span>~2ms • Tier-3</span></div>
+      <div class="loc-option" data-loc="frankfurt"><span class="loc-flag">🇩🇪</span><strong>Frankfurt</strong><span>~8ms • Tier-4</span></div>
+      <div class="loc-option" data-loc="amsterdam"><span class="loc-flag">🇳🇱</span><strong>Amsterdam</strong><span>~5ms • Tier-3</span></div>
+    </div>
+
+    <div class="order-nav">
+      <a href="index.html" class="btn-order-back">← Retour aux offres</a>
+      <button class="btn-order-next" onclick="goStep(2)">Continuer →</button>
+    </div>
+  </div>
+
+  <!-- ÉTAPE 2 : Compte -->
+  <div class="order-panel" id="order-step-2">
+    <h2 class="order-section-title">Vos informations</h2>
+    <div class="order-form">
+      <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="form-group"><label>Prénom</label><input type="text" id="o-prenom" placeholder="Jean"/></div>
+        <div class="form-group"><label>Nom</label><input type="text" id="o-nom" placeholder="Dupont"/></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" id="o-email" placeholder="jean@exemple.fr"/></div>
+      <div class="form-group"><label>Mot de passe</label><input type="password" id="o-pass" placeholder="Min. 8 caractères"/></div>
+      <div class="form-group"><label>Pays</label>
+        <select id="o-pays" style="background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--text);font-family:var(--font);font-size:.92rem;outline:none;appearance:none">
+          <option>France</option><option>Belgique</option><option>Suisse</option><option>Luxembourg</option><option>Canada</option><option>Autre</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Code promo (optionnel)</label>
+        <div style="display:flex;gap:10px">
+          <input type="text" id="o-promo" placeholder="Ex: NEXA20" style="flex:1;text-transform:uppercase"/>
+          <button type="button" class="btn-promo" onclick="applyOrderPromo()">Appliquer</button>
+        </div>
+        <div id="o-promoResult" class="promo-result" style="margin-top:6px"></div>
+      </div>
+    </div>
+    <div class="order-nav">
+      <button class="btn-order-back" onclick="goStep(1)">← Retour</button>
+      <button class="btn-order-next" onclick="goStep(3)">Continuer →</button>
+    </div>
+  </div>
+
+  <!-- ÉTAPE 3 : Paiement -->
+  <div class="order-panel" id="order-step-3">
+    <h2 class="order-section-title">Récapitulatif</h2>
+    <div class="order-summary" id="orderSummary"></div>
+
+    <h2 class="order-section-title">Méthode de paiement</h2>
+    <div class="payment-methods">
+      <div class="pm-option selected" data-pm="card">💳 Carte bancaire</div>
+      <div class="pm-option" data-pm="paypal">🅿️ PayPal</div>
+      <div class="pm-option" data-pm="sepa">🏦 Virement SEPA</div>
+    </div>
+
+    <div class="card-inputs" id="cardInputs">
+      <div class="form-group"><label>Numéro de carte</label><input type="text" placeholder="1234 5678 9012 3456" maxlength="19" id="cardNum" oninput="formatCard(this)"/></div>
+      <div class="card-row">
+        <div class="form-group"><label>Date d'expiration</label><input type="text" placeholder="MM/AA" maxlength="5"/></div>
+        <div class="form-group"><label>CVV</label><input type="text" placeholder="123" maxlength="3"/></div>
+      </div>
+      <div class="form-group"><label>Nom sur la carte</label><input type="text" placeholder="Jean Dupont"/></div>
+    </div>
+
+    <div style="background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:10px;padding:14px 18px;font-size:.84rem;color:var(--muted);margin-bottom:20px">
+      🔒 Paiement sécurisé par <strong style="color:var(--text)">Stripe</strong>. Vos données ne sont jamais stockées sur nos serveurs.
+    </div>
+
+    <div class="order-nav">
+      <button class="btn-order-back" onclick="goStep(2)">← Retour</button>
+      <button class="btn-order-next" onclick="placeOrder()">Confirmer la commande 🚀</button>
+    </div>
+  </div>
+
+  <!-- SUCCESS -->
+  <div class="order-panel" id="order-success">
+    <div class="order-success">
+      <div class="success-icon">🎉</div>
+      <h2>Commande confirmée !</h2>
+      <p>Votre serveur est en cours de déploiement. Vous recevrez vos identifiants par email dans moins de 60 secondes.</p>
+      <div class="order-id" id="orderId">Commande #NH-XXXXX</div>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="panel.html" class="btn-primary">Accéder au panel →</a>
+        <a href="index.html" class="btn-ghost">Retour à l'accueil</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="script.js"></script>
+<script>
+let selectedPlan = { name:'VPS Confort', price:8.99 };
+let selectedOs = 'Ubuntu 24.04', selectedLoc = 'Paris 🇫🇷';
+let discount = 0;
+
+// Pre-select from URL param
+const urlPlan = new URLSearchParams(location.search).get('plan');
+if (urlPlan) {
+  document.querySelectorAll('.plan-option').forEach(p => {
+    p.classList.toggle('selected', p.dataset.plan === urlPlan);
+    if (p.dataset.plan === urlPlan) selectedPlan = { name: p.querySelector('h4').textContent, price: +p.dataset.price };
+  });
+}
+
+document.querySelectorAll('.plan-option').forEach(p => p.addEventListener('click', () => {
+  document.querySelectorAll('.plan-option').forEach(x => x.classList.remove('selected'));
+  p.classList.add('selected');
+  selectedPlan = { name: p.querySelector('h4').textContent, price: +p.dataset.price };
+}));
+document.querySelectorAll('.os-option').forEach(o => o.addEventListener('click', () => {
+  document.querySelectorAll('.os-option').forEach(x => x.classList.remove('selected'));
+  o.classList.add('selected'); selectedOs = o.textContent.trim();
+}));
+document.querySelectorAll('.loc-option').forEach(l => l.addEventListener('click', () => {
+  document.querySelectorAll('.loc-option').forEach(x => x.classList.remove('selected'));
+  l.classList.add('selected'); selectedLoc = l.querySelector('strong').textContent + ' ' + l.querySelector('.loc-flag').textContent;
+}));
+document.querySelectorAll('.pm-option').forEach(pm => pm.addEventListener('click', () => {
+  document.querySelectorAll('.pm-option').forEach(x => x.classList.remove('selected'));
+  pm.classList.add('selected');
+  document.getElementById('cardInputs').style.display = pm.dataset.pm === 'card' ? 'grid' : 'none';
+}));
+
+const PROMOS_ORDER = { 'NEXA20':20, 'BIENVENUE':100, 'PRO10':10, 'GAME5':5 };
+function applyOrderPromo() {
+  const code = (document.getElementById('o-promo')?.value||'').trim().toUpperCase();
+  const res = document.getElementById('o-promoResult');
+  if (PROMOS_ORDER[code]) {
+    discount = PROMOS_ORDER[code]; res.textContent='✅ Code appliqué !'; res.className='promo-result ok';
+  } else { discount=0; res.textContent='❌ Code invalide.'; res.className='promo-result err'; }
+}
+
+function goStep(n) {
+  document.querySelectorAll('.order-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.order-step').forEach((s,i) => {
+    s.classList.remove('active','done');
+    if (i+1 < n) s.classList.add('done');
+    if (i+1 === n) s.classList.add('active');
+  });
+  document.getElementById(`order-step-${n}`).classList.add('active');
+  if (n === 3) buildSummary();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function buildSummary() {
+  const final = Math.max(selectedPlan.price * (1 - discount/100), 0);
+  document.getElementById('orderSummary').innerHTML = `
+    <div class="os-row"><span>Offre</span><span>${selectedPlan.name}</span></div>
+    <div class="os-row"><span>Système</span><span>${selectedOs}</span></div>
+    <div class="os-row"><span>Localisation</span><span>${selectedLoc}</span></div>
+    ${discount ? `<div class="os-row"><span>Réduction</span><span style="color:var(--green)">-${discount}%</span></div>` : ''}
+    <div class="os-row"><span>Total/mois</span><span>${final.toFixed(2).replace('.',',')}€</span></div>
+  `;
+}
+
+function formatCard(input) {
+  input.value = input.value.replace(/\D/g,'').replace(/(.{4})/g,'$1 ').trim();
+}
+
+function placeOrder() {
+  const id = 'NH-' + Math.random().toString(36).substr(2,5).toUpperCase();
+  document.getElementById('orderId').textContent = 'Commande #' + id;
+  document.querySelectorAll('.order-panel,.order-steps').forEach(p => p.classList.remove('active'));
+  document.getElementById('order-success').classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexaHost — Ping Checker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="loader"><div class="loader-logo">Nexa<span>Host</span></div><div class="loader-ring"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28"/><circle class="arc" cx="32" cy="32" r="28"/></svg></div><div class="loader-bar"><div class="loader-fill"></div></div><div class="loader-text">Chargement...</div></div>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Nexa<span>Host</span></a>
+  <ul class="nav-links"><li><a href="index.html">Accueil</a></li><li><a href="index.html#particuliers">Offres</a></li></ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Thème">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a href="order.html" class="btn-nav">Commander</a>
+  </div>
+</nav>
+
+<main class="ping-page">
+  <div class="section-header" style="padding-top:calc(var(--nav-h)+40px);margin-bottom:40px">
+    <p class="section-tag">Outil</p>
+    <h2>Ping Checker</h2>
+    <p class="section-sub">Testez votre latence vers nos 3 datacenters européens depuis votre position.</p>
+  </div>
+
+  <div class="ping-input-row">
+    <input type="text" class="ping-input" id="pingIp" placeholder="Entrez votre IP ou laissez vide pour détecter automatiquement" />
+    <button class="btn-ping" id="pingBtn" onclick="runPing()">⚡ Tester</button>
+  </div>
+
+  <div id="pingIpDisplay" style="text-align:center;font-family:var(--mono);font-size:.82rem;color:var(--muted);margin-bottom:28px"></div>
+
+  <div class="ping-results" id="pingResults">
+    <div class="ping-result" id="pr-paris">
+      <span class="ping-flag">🇫🇷</span>
+      <div class="ping-info"><strong>Paris, France</strong><span>CDG1 — Tier-3</span></div>
+      <div class="ping-bar-wrap"><div class="ping-bar-bg"><div class="ping-bar-fill" id="pb-paris" style="width:0%"></div></div></div>
+      <div class="ping-ms" id="pm-paris">—</div>
+    </div>
+    <div class="ping-result" id="pr-frankfurt">
+      <span class="ping-flag">🇩🇪</span>
+      <div class="ping-info"><strong>Frankfurt, Allemagne</strong><span>FRA1 — Tier-4</span></div>
+      <div class="ping-bar-wrap"><div class="ping-bar-bg"><div class="ping-bar-fill" id="pb-frankfurt" style="width:0%"></div></div></div>
+      <div class="ping-ms" id="pm-frankfurt">—</div>
+    </div>
+    <div class="ping-result" id="pr-amsterdam">
+      <span class="ping-flag">🇳🇱</span>
+      <div class="ping-info"><strong>Amsterdam, Pays-Bas</strong><span>AMS1 — Tier-3</span></div>
+      <div class="ping-bar-wrap"><div class="ping-bar-bg"><div class="ping-bar-fill" id="pb-amsterdam" style="width:0%"></div></div></div>
+      <div class="ping-ms" id="pm-amsterdam">—</div>
+    </div>
+  </div>
+
+  <div id="pingRecommend" style="display:none;margin-top:32px;background:rgba(0,229,255,.06);border:1px solid rgba(0,229,255,.2);border-radius:var(--radius);padding:20px 24px;text-align:center">
+    <p style="font-family:var(--mono);font-size:.8rem;color:var(--muted);margin-bottom:8px">RECOMMANDATION</p>
+    <p id="pingRecommendText" style="font-weight:700;font-size:1rem;margin-bottom:16px"></p>
+    <a href="order.html" class="btn-primary">Choisir ce datacenter →</a>
+  </div>
+
+  <p class="ping-note">
+    ⚠️ Les latences affichées sont simulées à partir de votre position géographique estimée.<br/>
+    Pour un test réel, utilisez la commande <code style="color:var(--accent);font-family:var(--mono)">ping paris.nexahost.fr</code> dans votre terminal.
+  </p>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="nav-logo">Nexa<span>Host</span></span></div>
+    <div class="footer-links"><strong>Navigation</strong><a href="index.html">Accueil</a><a href="index.html#particuliers">Offres</a></div>
+    <div class="footer-links"><strong>Outils</strong><a href="ping.html">Ping Checker</a><a href="status.html">Statut</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 NexaHost.</p></div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+const DCS = [
+  { id:'paris',    name:'Paris',     base:8,  range:15 },
+  { id:'frankfurt',name:'Frankfurt', base:18, range:20 },
+  { id:'amsterdam',name:'Amsterdam', base:14, range:18 },
+];
+
+async function detectIp() {
+  try {
+    const r = await fetch('https://api.ipify.org?format=json');
+    const d = await r.json();
+    return d.ip;
+  } catch { return '—'; }
+}
+
+async function runPing() {
+  const btn = document.getElementById('pingBtn');
+  btn.textContent = '⏳ Test en cours...'; btn.disabled = true;
+
+  // Detect or use entered IP
+  let ip = document.getElementById('pingIp').value.trim();
+  if (!ip) { ip = await detectIp(); document.getElementById('pingIp').value = ip; }
+  document.getElementById('pingIpDisplay').textContent = '📍 IP détectée : ' + ip;
+
+  // Reset
+  DCS.forEach(dc => {
+    const pr = document.getElementById('pr-'+dc.id);
+    pr.className = 'ping-result measuring';
+    document.getElementById('pm-'+dc.id).innerHTML = '<div class="ping-loader"><div class="ping-dot"></div><div class="ping-dot"></div><div class="ping-dot"></div></div>';
+    document.getElementById('pb-'+dc.id).style.width = '0%';
+    document.getElementById('pb-'+dc.id).className = 'ping-bar-fill';
+  });
+
+  document.getElementById('pingRecommend').style.display = 'none';
+
+  // Simulate pings with delays
+  const results = [];
+  for (const dc of DCS) {
+    await new Promise(r => setTimeout(r, 400 + Math.random() * 600));
+    const ms = dc.base + Math.floor(Math.random() * dc.range);
+    results.push({ ...dc, ms });
+    const cls = ms < 20 ? 'fast' : ms < 50 ? 'medium' : 'slow';
+    const pct = Math.min(ms / 150 * 100, 100);
+    document.getElementById('pr-'+dc.id).className = 'ping-result ' + cls;
+    document.getElementById('pm-'+dc.id).textContent = ms + ' ms';
+    document.getElementById('pm-'+dc.id).className = 'ping-ms ' + cls;
+    document.getElementById('pb-'+dc.id).style.width = pct + '%';
+    document.getElementById('pb-'+dc.id).className = 'ping-bar-fill ' + cls;
+  }
+
+  // Recommend best
+  const best = results.reduce((a,b) => a.ms < b.ms ? a : b);
+  document.getElementById('pingRecommend').style.display = 'block';
+  document.getElementById('pingRecommendText').textContent =
+    `✅ Meilleure latence : ${best.name} (${best.ms} ms) — Datacenter recommandé pour vous.`;
+
+  btn.textContent = '⚡ Tester à nouveau'; btn.disabled = false;
+}
+
+// Auto-detect IP on load
+detectIp().then(ip => {
+  if (ip !== '—') document.getElementById('pingIpDisplay').textContent = '📍 IP détectée : ' + ip;
+});
+</script>
+</body>
+</html>

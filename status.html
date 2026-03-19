@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexaHost — Statut</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="loader"><div class="loader-logo">Nexa<span>Host</span></div><div class="loader-ring"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28"/><circle class="arc" cx="32" cy="32" r="28"/></svg></div><div class="loader-bar"><div class="loader-fill"></div></div><div class="loader-text">Vérification des services...</div></div>
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Nexa<span>Host</span></a>
+  <ul class="nav-links"><li><a href="index.html#particuliers">Offres</a></li><li><a href="index.html#contact">Contact</a></li></ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Thème">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a href="index.html" class="btn-nav">← Accueil</a>
+  </div>
+</nav>
+<main class="status-page">
+  <div class="status-hero">
+    <div class="status-overall">✅ Tous les systèmes opérationnels</div>
+    <h1>Statut des services</h1>
+    <p style="color:var(--muted);font-family:var(--mono);font-size:.85rem">Dernière mise à jour : <span id="lastUpdate"></span></p>
+  </div>
+  <div class="status-section">
+    <p class="status-section-title">🖥️ Infrastructure — Paris</p>
+    <div class="status-item reveal"><div class="si-left"><span class="si-name">Réseau Paris CDG1</span><span class="si-desc">Backbone 10 Gbit/s</span><div class="uptime-bar" id="b1"></div></div><div class="si-right"><span class="si-uptime">99.99%</span><span class="si-badge ok">Opérationnel</span></div></div>
+    <div class="status-item reveal"><div class="si-left"><span class="si-name">VPS Paris Pool A</span><span class="si-desc">320 nœuds actifs</span><div class="uptime-bar" id="b2"></div></div><div class="si-right"><span class="si-uptime">99.98%</span><span class="si-badge ok">Opérationnel</span></div></div>
+    <div class="status-item reveal"><div class="si-left"><span class="si-name">VPS Paris Pool B</span><span class="si-desc">280 nœuds actifs</span><div class="uptime-bar" id="b3"></div></div><div class="si-right"><span class="si-uptime">100%</span><span class="si-badge ok">Opérationnel</span></div></div>
+  </div>
+  <div class="status-section">
+    <p class="status-section-title">🇩🇪 Infrastructure — Frankfurt</p>
+    <div class="status-item reveal"><div class="si-left"><span class="si-name">Réseau Frankfurt FRA1</span><span class="si-desc">Backbone 25 Gbit/s — Tier-4</span><div class="uptime-bar" id="b4"></div></div><div class="si-right"><span class="si-uptime">100%</span><span class="si-badge ok">Opérationnel</span></div></div>
+    <div class="status-item reveal"><div class="si-left"><span class="si-name">Serveurs Dédiés Frankfurt</span><span class="si-desc">48 racks actifs</span><div class="uptime-bar" id="b5"></div></div><div class="si-right"><span class="si-uptime">99.97%</span><span class="si-badge ok">Opérationnel</span></div></div>
+  </div>
+  <div class="status-section">
+    <p class="status-section-title">🇳🇱 Infrastructure — Amsterdam</p>
+    <div class="status-item reveal"><div class="si-left"><span class="si-name">Réseau Amsterdam AMS1</span><span class="si-desc">Backbone 10 Gbit/s — Tier-3</span><div class="uptime-bar" id="b6"></div></div><div class="si-right"><span class="si-uptime">99.95%</span><span class="si-badge ok">Opérationnel</span></div></div>
+    <div class="status-item reveal"><div class="si-left"><span class="si-name">Game Servers Amsterdam</span><span class="si-desc">Serveurs haute fréquence</span><div class="uptime-bar" id="b7"></div></div><div class="si-right"><span class="si-uptime">99.99%</span><span class="si-badge ok">Opérationnel</span></div></div>
+  </div>
+  <div class="status-section">
+    <p class="status-section-title">⚙️ Services</p>
+    <div class="status-item reveal"><div class="si-left"><span class="si-name">Panel client</span><span class="si-desc">panel.nexahost.fr</span><div class="uptime-bar" id="b8"></div></div><div class="si-right"><span class="si-uptime">99.99%</span><span class="si-badge ok">Opérationnel</span></div></div>
+    <div class="status-item reveal"><div class="si-left"><span class="si-name">API REST v2</span><span class="si-desc">api.nexahost.fr</span><div class="uptime-bar" id="b9"></div></div><div class="si-right"><span class="si-uptime">99.98%</span><span class="si-badge ok">Opérationnel</span></div></div>
+    <div class="status-item reveal"><div class="si-left"><span class="si-name">DNS Anycast</span><span class="si-desc">Résolution DNS globale</span><div class="uptime-bar" id="b10"></div></div><div class="si-right"><span class="si-uptime">100%</span><span class="si-badge ok">Opérationnel</span></div></div>
+  </div>
+  <div class="status-section">
+    <p class="status-section-title">📋 Incidents (30 derniers jours)</p>
+    <div class="incident-log"><p class="incident-empty">✅ Aucun incident majeur ces 30 derniers jours.</p></div>
+  </div>
+</main>
+<footer class="footer"><div class="footer-inner"><div class="footer-brand"><span class="nav-logo">Nexa<span>Host</span></span></div><div class="footer-links"><strong>Navigation</strong><a href="index.html">Accueil</a><a href="cgv.html">CGV</a><a href="mentions-legales.html">Mentions légales</a></div></div><div class="footer-bottom"><p>© 2025 NexaHost.</p></div></footer>
+<script src="script.js"></script>
+<script>
+document.getElementById('lastUpdate').textContent = new Date().toLocaleString('fr-FR');
+function genBar(id, down=[]) {
+  const el=document.getElementById(id); if(!el)return;
+  for(let i=0;i<60;i++){const d=document.createElement('div');d.className='uptime-day'+(down.includes(i)?' down':'');el.appendChild(d);}
+}
+['b1','b3','b4','b6','b7','b8','b9','b10'].forEach(id=>genBar(id));
+genBar('b2',[45]); genBar('b5',[38]);
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexaHost — Panel Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="loader"><div class="loader-logo">Nexa<span>Host</span></div><div class="loader-ring"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28"/><circle class="arc" cx="32" cy="32" r="28"/></svg></div><div class="loader-bar"><div class="loader-fill"></div></div><div class="loader-text">Chargement du panel...</div></div>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Nexa<span>Host</span></a>
+  <ul class="nav-links"><li><a href="index.html">Accueil</a></li><li><a href="status.html">Statut</a></li><li><a href="index.html#contact">Support</a></li></ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Thème">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <span style="font-size:.84rem;color:var(--muted);font-family:var(--mono)">👤 jean.dupont</span>
+  </div>
+</nav>
+
+<main class="panel-page">
+  <div class="panel-header">
+    <div class="panel-welcome">
+      <h1>Bonjour, Jean 👋</h1>
+      <p id="panelDate">Chargement...</p>
+    </div>
+    <a href="order.html" class="btn-primary">+ Nouveau serveur</a>
+  </div>
+
+  <!-- Stats -->
+  <div class="panel-grid">
+    <div class="panel-stat reveal"><div class="ps-label">Serveurs actifs</div><div class="ps-val">3</div><div class="ps-sub">sur 3 en ligne</div></div>
+    <div class="panel-stat reveal"><div class="ps-label">Trafic ce mois</div><div class="ps-val">847 Go</div><div class="ps-sub">sur 3 000 Go inclus</div></div>
+    <div class="panel-stat reveal"><div class="ps-label">Uptime moyen</div><div class="ps-val" style="color:var(--green)">99.98%</div><div class="ps-sub">30 derniers jours</div></div>
+    <div class="panel-stat reveal"><div class="ps-label">Prochaine facture</div><div class="ps-val">29,97€</div><div class="ps-sub">dans 12 jours</div></div>
+  </div>
+
+  <!-- Serveurs -->
+  <div class="panel-section-title">🖥️ Mes serveurs <span class="panel-badge">3 actifs</span></div>
+  <div class="server-list">
+    <div class="server-item reveal">
+      <div class="si-status-dot"></div>
+      <div class="si-info"><strong>vps-paris-01</strong><span>VPS Confort • Paris 🇫🇷 • Ubuntu 24.04</span></div>
+      <div class="si-metrics">
+        <div class="si-metric"><div class="sm-val">62%</div><div class="sm-label">CPU</div></div>
+        <div class="si-metric"><div class="sm-val">45%</div><div class="sm-label">RAM</div></div>
+        <div class="si-metric"><div class="sm-val">30%</div><div class="sm-label">SSD</div></div>
+        <div class="si-metric"><div class="sm-val" style="color:var(--green)">12ms</div><div class="sm-label">Ping</div></div>
+      </div>
+      <div class="si-actions">
+        <button class="btn-sm" onclick="alert('Console ouverte !')">Console</button>
+        <button class="btn-sm" onclick="alert('Redémarrage en cours...')">Restart</button>
+        <button class="btn-sm danger" onclick="alert('Confirmation requise')">Stop</button>
+      </div>
+    </div>
+    <div class="server-item reveal">
+      <div class="si-status-dot"></div>
+      <div class="si-info"><strong>game-mc-01</strong><span>Game Clan • Amsterdam 🇳🇱 • Minecraft 1.21</span></div>
+      <div class="si-metrics">
+        <div class="si-metric"><div class="sm-val">78%</div><div class="sm-label">CPU</div></div>
+        <div class="si-metric"><div class="sm-val">82%</div><div class="sm-label">RAM</div></div>
+        <div class="si-metric"><div class="sm-val">55%</div><div class="sm-label">SSD</div></div>
+        <div class="si-metric"><div class="sm-val" style="color:var(--yellow)">38ms</div><div class="sm-label">Ping</div></div>
+      </div>
+      <div class="si-actions">
+        <button class="btn-sm" onclick="alert('Console ouverte !')">Console</button>
+        <button class="btn-sm" onclick="alert('Redémarrage en cours...')">Restart</button>
+        <button class="btn-sm danger">Stop</button>
+      </div>
+    </div>
+    <div class="server-item reveal">
+      <div class="si-status-dot"></div>
+      <div class="si-info"><strong>vps-fra-02</strong><span>VPS Starter • Frankfurt 🇩🇪 • Debian 12</span></div>
+      <div class="si-metrics">
+        <div class="si-metric"><div class="sm-val">12%</div><div class="sm-label">CPU</div></div>
+        <div class="si-metric"><div class="sm-val">28%</div><div class="sm-label">RAM</div></div>
+        <div class="si-metric"><div class="sm-val">18%</div><div class="sm-label">SSD</div></div>
+        <div class="si-metric"><div class="sm-val" style="color:var(--green)">8ms</div><div class="sm-label">Ping</div></div>
+      </div>
+      <div class="si-actions">
+        <button class="btn-sm">Console</button>
+        <button class="btn-sm">Restart</button>
+        <button class="btn-sm danger">Stop</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Factures -->
+  <div class="panel-section-title" style="margin-top:40px">🧾 Factures récentes</div>
+  <div class="invoice-list">
+    <div class="invoice-item reveal">
+      <div class="inv-info"><strong>Facture #NH-2025-012</strong><span>Décembre 2025</span></div>
+      <div class="inv-amount">29,97€</div>
+      <span class="inv-badge paid">Payée</span>
+      <button class="btn-dl" onclick="alert('Téléchargement PDF...')">📄 PDF</button>
+    </div>
+    <div class="invoice-item reveal">
+      <div class="inv-info"><strong>Facture #NH-2025-011</strong><span>Novembre 2025</span></div>
+      <div class="inv-amount">29,97€</div>
+      <span class="inv-badge paid">Payée</span>
+      <button class="btn-dl" onclick="alert('Téléchargement PDF...')">📄 PDF</button>
+    </div>
+    <div class="invoice-item reveal">
+      <div class="inv-info"><strong>Facture #NH-2025-010</strong><span>Octobre 2025</span></div>
+      <div class="inv-amount">17,98€</div>
+      <span class="inv-badge paid">Payée</span>
+      <button class="btn-dl" onclick="alert('Téléchargement PDF...')">📄 PDF</button>
+    </div>
+    <div class="invoice-item reveal">
+      <div class="inv-info"><strong>Facture #NH-2026-001</strong><span>Janvier 2026</span></div>
+      <div class="inv-amount">29,97€</div>
+      <span class="inv-badge pending">En attente</span>
+      <button class="btn-dl btn-primary" style="padding:6px 14px;font-size:.78rem" onclick="alert('Paiement...')">Payer</button>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="nav-logo">Nexa<span>Host</span></span></div>
+    <div class="footer-links"><strong>Navigation</strong><a href="index.html">Accueil</a><a href="status.html">Statut</a><a href="index.html#contact">Support</a></div>
+    <div class="footer-links"><strong>Légal</strong><a href="cgv.html">CGV</a><a href="mentions-legales.html">Mentions légales</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 NexaHost.</p></div>
+</footer>
+<script src="script.js"></script>
+<script>
+  document.getElementById('panelDate').textContent = new Date().toLocaleDateString('fr-FR',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+</script>
+</body>
+</html>

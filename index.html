@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="NexaHost — Hébergement VPS, serveurs dédiés et solutions cloud haute performance."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://nexahost.fr/"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23080a0f'/><text x='4' y='24' font-size='22' font-family='Arial' font-weight='900' fill='%2300e5ff'>N</text></svg>"/>
+<title>NexaHost — Hébergement Haute Performance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NOTIF BANNER -->
+<div id="notif">
+  🔥 Offre limitée — <strong>30% de réduction</strong> avec le code <strong>NEXA20</strong>
+  <button class="notif-x" id="notif-x">✕</button>
+</div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="ld-logo">Nexa<span>Host</span></div>
+  <div class="ld-bar"><div class="ld-fill"></div></div>
+</div>
+
+<!-- COOKIE -->
+<div id="cookie">
+  <div style="display:flex;align-items:flex-start;gap:12px">
+    <span style="font-size:1.6rem;flex-shrink:0">🍪</span>
+    <div class="ck-text">
+      <strong>Nous utilisons des cookies</strong>
+      <p>NexaHost utilise uniquement des cookies essentiels. Aucun tracking. Conforme au RGPD.</p>
+    </div>
+  </div>
+  <div class="ck-btns">
+    <button class="ck-refuse" id="ck-refuse">Refuser</button>
+    <button class="ck-accept" id="ck-accept">Accepter ✓</button>
+  </div>
+</div>
+
+<!-- BACK TO TOP -->
+<button id="btt" aria-label="Retour en haut">▲</button>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="#top" class="logo">Nexa<span>Host</span></a>
+  <ul class="nav-links">
+    <li><a href="#top">Accueil</a></li>
+    <li><a href="#offres">Particuliers</a></li>
+    <li><a href="#pro">Pro</a></li>
+    <li><a href="#dc">Datacenters</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="btn-theme" id="theme-btn">☀️</button>
+    <a href="order.html" class="btn-order">Commander</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div id="nav-mob">
+  <a href="#top">Accueil</a>
+  <a href="#offres">Particuliers</a>
+  <a href="#pro">Pro</a>
+  <a href="#dc">Datacenters</a>
+  <a href="blog.html">Blog</a>
+  <a href="#contact">Contact</a>
+  <a href="order.html">Commander</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content au">
+    <div class="badge">⚡ Infrastructure nouvelle génération</div>
+    <h1>Hébergez sans<br/><span class="grad">compromis.</span></h1>
+    <p class="hero-sub">Serveurs dédiés, VPS et solutions cloud taillés pour la performance. Déployez en moins de 60 secondes.</p>
+    <div class="hero-cta">
+      <a href="order.html" class="btn-prim">Commander maintenant</a>
+      <a href="#contact" class="btn-ghost">Nous contacter →</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><span id="c1">0%</span><p>Uptime</p></div>
+      <div class="stat-sep"></div>
+      <div class="stat"><span id="c2">0</span><p>Clients</p></div>
+      <div class="stat-sep"></div>
+      <div class="stat"><span id="c3">0s</span><p>Déploiement</p></div>
+      <div class="stat-sep"></div>
+      <div class="stat"><span>24/7</span><p>Support</p></div>
+    </div>
+  </div>
+  <div class="scard au au1">
+    <div class="sc-head"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="sc-title">nexahost-vps-01</span></div>
+    <div class="sc-body">
+      <div class="metric"><span class="lbl">CPU</span><div class="bar"><div class="fill" style="width:62%"></div></div><span class="val">62%</span></div>
+      <div class="metric"><span class="lbl">RAM</span><div class="bar"><div class="fill" style="width:45%"></div></div><span class="val">45%</span></div>
+      <div class="metric"><span class="lbl">SSD</span><div class="bar"><div class="fill" style="width:30%"></div></div><span class="val">30%</span></div>
+      <div class="metric"><span class="lbl">NET</span><div class="bar"><div class="fill" style="width:78%"></div></div><span class="val">78%</span></div>
+      <div class="sc-foot"><span class="live-dot"></span> En ligne — Paris, FR | 12ms</div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<div class="partners">
+  <p class="p-label">Technologies & partenaires</p>
+  <div class="p-track"><div class="p-inner">
+    <div class="p-logo">🐧 Linux</div><div class="p-logo">🐳 Docker</div>
+    <div class="p-logo">☸️ Kubernetes</div><div class="p-logo">Debian</div>
+    <div class="p-logo">Ubuntu</div><div class="p-logo">NGINX</div>
+    <div class="p-logo">MariaDB</div><div class="p-logo">🐘 PostgreSQL</div>
+    <div class="p-logo">Redis</div><div class="p-logo">🔒 Let's Encrypt</div>
+    <div class="p-logo">🐧 Linux</div><div class="p-logo">🐳 Docker</div>
+    <div class="p-logo">☸️ Kubernetes</div><div class="p-logo">Debian</div>
+    <div class="p-logo">Ubuntu</div><div class="p-logo">NGINX</div>
+    <div class="p-logo">MariaDB</div><div class="p-logo">🐘 PostgreSQL</div>
+    <div class="p-logo">Redis</div><div class="p-logo">🔒 Let's Encrypt</div>
+  </div></div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="sh"><p class="tag">Simple</p><h2>Comment ça marche ?</h2><p>Votre serveur en ligne en 3 étapes, en moins de 2 minutes.</p></div>
+  <div class="tl">
+    <div class="tl-step">
+      <div class="tl-num">🛒<span class="tl-n">1</span></div>
+      <div class="tl-body"><h3>Choisissez votre offre</h3><p>Sélectionnez la configuration qui correspond à vos besoins parmi nos offres VPS, Game Server ou Dédié.</p></div>
+    </div>
+    <div class="tl-step">
+      <div class="tl-num">⚙️<span class="tl-n">2</span></div>
+      <div class="tl-body"><h3>Configurez & payez</h3><p>Choisissez votre OS, votre localisation et vos options. Paiement sécurisé par Stripe en moins de 2 minutes.</p></div>
+    </div>
+    <div class="tl-step">
+      <div class="tl-num">🚀<span class="tl-n">3</span></div>
+      <div class="tl-body"><h3>Votre serveur est prêt</h3><p>En moins de 60 secondes, vous recevez vos identifiants par email. Votre serveur est immédiatement accessible.</p></div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:44px"><a href="order.html" class="btn-prim">Commencer →</a></div>
+</section>
+
+<!-- OFFRES PARTICULIERS -->
+<section class="offres" id="offres">
+  <div class="sh"><p class="tag">Particuliers</p><h2>Offres grand public</h2><p>Pour vos projets persos, jeux, bots et sites. Sans engagement.</p></div>
+  <div class="tabs">
+    <button class="tab on" data-tab="vps">VPS</button>
+    <button class="tab" data-tab="game">Game Server</button>
+    <button class="tab" data-tab="storage">Stockage</button>
+  </div>
+
+  <div class="panel on" id="tab-vps">
+    <div class="grid">
+      <div class="card">
+        <div><span class="ctag c1">VPS</span><h3>Nano</h3><p class="card-desc">Bot Discord, petit site ou projet test.</p></div>
+        <div class="price"><span class="amt">1,99€</span><span class="per">/mois</span></div>
+        <ul class="feats"><li><span class="ok">✓</span>1 vCPU</li><li><span class="ok">✓</span>1 Go RAM</li><li><span class="ok">✓</span>20 Go SSD NVMe</li><li><span class="ok">✓</span>500 Mbit/s</li><li><span class="no">✗</span>Snapshots</li></ul>
+        <a href="order.html?plan=nano" class="btn-card">Commander</a>
+      </div>
+      <div class="card">
+        <div><span class="ctag c1">VPS</span><h3>Starter</h3><p class="card-desc">Site web, serveur léger ou API.</p></div>
+        <div class="price"><span class="amt">3,99€</span><span class="per">/mois</span></div>
+        <ul class="feats"><li><span class="ok">✓</span>2 vCPU</li><li><span class="ok">✓</span>4 Go RAM</li><li><span class="ok">✓</span>50 Go SSD NVMe</li><li><span class="ok">✓</span>1 Gbit/s</li><li><span class="no">✗</span>Snapshots</li></ul>
+        <a href="order.html?plan=starter" class="btn-card">Commander</a>
+      </div>
+      <div class="card hot">
+        <div class="cbadge">⭐ Populaire</div>
+        <div><span class="ctag c1">VPS</span><h3>Confort</h3><p class="card-desc">Projets en croissance, puissance garantie.</p></div>
+        <div class="price"><span class="amt">8,99€</span><span class="per">/mois</span></div>
+        <ul class="feats"><li><span class="ok">✓</span>4 vCPU</li><li><span class="ok">✓</span>8 Go RAM</li><li><span class="ok">✓</span>120 Go SSD NVMe</li><li><span class="ok">✓</span>2.5 Gbit/s</li><li><span class="ok">✓</span>Snapshots inclus</li></ul>
+        <a href="order.html?plan=confort" class="btn-card featured">Commander</a>
+      </div>
+      <div class="card">
+        <div><span class="ctag c1">VPS</span><h3>Power</h3><p class="card-desc">Applications gourmandes, plusieurs services.</p></div>
+        <div class="price"><span class="amt">16,99€</span><span class="per">/mois</span></div>
+        <ul class="feats"><li><span class="ok">✓</span>8 vCPU</li><li><span class="ok">✓</span>16 Go RAM</li><li><span class="ok">✓</span>250 Go SSD NVMe</li><li><span class="ok">✓</span>10 Gbit/s</li><li><span class="ok">✓</span>Snapshots + Backup</li></ul>
+        <a href="order.html?plan=power" class="btn-card">Commander</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" id="tab-game">
+    <div class="grid g3">
+      <div class="card">
+        <div><span class="ctag c2">Game</span><h3>Mini</h3><p class="card-desc">Minecraft, Terraria ou CS2 entre amis.</p></div>
+        <div class="price"><span class="amt">4,99€</span><span class="per">/mois</span></div>
+        <ul class="feats"><li><span class="ok">✓</span>4 vCPU haute fréq.</li><li><span class="ok">✓</span>6 Go RAM</li><li><span class="ok">✓</span>50 Go SSD</li><li><span class="ok">✓</span>DDoS Protection</li><li><span class="no">✗</span>Mods illimités</li></ul>
+        <a href="order.html?plan=game-mini" class="btn-card">Commander</a>
+      </div>
+      <div class="card hot">
+        <div class="cbadge">🎮 Best seller</div>
+        <div><span class="ctag c2">Game</span><h3>Clan</h3><p class="card-desc">20 à 50 joueurs avec mods.</p></div>
+        <div class="price"><span class="amt">12,99€</span><span class="per">/mois</span></div>
+        <ul class="feats"><li><span class="ok">✓</span>8 vCPU haute fréq.</li><li><span class="ok">✓</span>16 Go RAM</li><li><span class="ok">✓</span>150 Go SSD</li><li><span class="ok">✓</span>DDoS Protection</li><li><span class="ok">✓</span>Mods illimités</li></ul>
+        <a href="order.html?plan=game-clan" class="btn-card featured">Commander</a>
+      </div>
+      <div class="card">
+        <div><span class="ctag c2">Game</span><h3>Réseau</h3><p class="card-desc">100+ joueurs, Bungeecord/Velocity.</p></div>
+        <div class="price"><span class="amt">29,99€</span><span class="per">/mois</span></div>
+        <ul class="feats"><li><span class="ok">✓</span>16 vCPU haute fréq.</li><li><span class="ok">✓</span>32 Go RAM</li><li><span class="ok">✓</span>300 Go SSD</li><li><span class="ok">✓</span>DDoS Pro</li><li><span class="ok">✓</span>Backups quotidiens</li></ul>
+        <a href="order.html?plan=game-reseau" class="btn-card">Commander</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" id="tab-storage">
+    <div class="grid g3">
+      <div class="card">
+        <div><span class="ctag c3">Stockage</span><h3>S3 Basic</h3><p class="card-desc">Stockage objet S3 pour fichiers et backups.</p></div>
+        <div class="price"><span class="amt">2,49€</span><span class="per">/mois</span></div>
+        <ul class="feats"><li><span class="ok">✓</span>500 Go</li><li><span class="ok">✓</span>API S3</li><li><span class="ok">✓</span>1 To bande passante</li></ul>
+        <a href="order.html?plan=s3-basic" class="btn-card">Commander</a>
+      </div>
+      <div class="card hot">
+        <div class="cbadge">💾 Recommandé</div>
+        <div><span class="ctag c3">Stockage</span><h3>S3 Pro</h3><p class="card-desc">Médias et données volumineuses.</p></div>
+        <div class="price"><span class="amt">6,99€</span><span class="per">/mois</span></div>
+        <ul class="feats"><li><span class="ok">✓</span>2 To</li><li><span class="ok">✓</span>API S3</li><li><span class="ok">✓</span>5 To bande passante</li><li><span class="ok">✓</span>CDN intégré</li></ul>
+        <a href="order.html?plan=s3-pro" class="btn-card featured">Commander</a>
+      </div>
+      <div class="card">
+        <div><span class="ctag c3">Stockage</span><h3>S3 Max</h3><p class="card-desc">Stockage massif, usages intensifs.</p></div>
+        <div class="price"><span class="amt">14,99€</span><span class="per">/mois</span></div>
+        <ul class="feats"><li><span class="ok">✓</span>10 To</li><li><span class="ok">✓</span>API S3 + Swift</li><li><span class="ok">✓</span>Illimité</li><li><span class="ok">✓</span>CDN + SSL auto</li></ul>
+        <a href="order.html?plan=s3-max" class="btn-card">Commander</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATEUR -->
+<section class="calc-s" id="calc">
+  <div class="sh"><p class="tag">Outil</p><h2>Calculateur de prix</h2><p>Configurez votre serveur et obtenez un prix instantané.</p></div>
+  <div class="calc-wrap">
+    <div class="calc-controls">
+      <div class="cg">
+        <div class="cg-row"><label>vCPU</label><span class="cval" id="cpuVal">2 vCPU</span></div>
+        <input type="range" id="cpuR" min="1" max="16" value="2"/>
+        <div class="ticks"><span>1</span><span>4</span><span>8</span><span>16</span></div>
+      </div>
+      <div class="cg">
+        <div class="cg-row"><label>RAM</label><span class="cval" id="ramVal">4 Go</span></div>
+        <input type="range" id="ramR" min="1" max="128" value="4"/>
+        <div class="ticks"><span>1 Go</span><span>32 Go</span><span>64 Go</span><span>128 Go</span></div>
+      </div>
+      <div class="cg">
+        <div class="cg-row"><label>SSD NVMe</label><span class="cval" id="ssdVal">50 Go</span></div>
+        <input type="range" id="ssdR" min="20" max="2000" value="50" step="10"/>
+        <div class="ticks"><span>20 Go</span><span>500 Go</span><span>1 To</span><span>2 To</span></div>
+      </div>
+      <div class="opts">
+        <label class="opt"><input type="checkbox" id="oSnap"/> <span>Snapshots <em>+1,50€/mois</em></span></label>
+        <label class="opt"><input type="checkbox" id="oBack"/> <span>Backup quotidien <em>+2,00€/mois</em></span></label>
+        <label class="opt"><input type="checkbox" id="oDdos"/> <span>DDoS Pro <em>+3,00€/mois</em></span></label>
+        <label class="opt"><input type="checkbox" id="oIPv4"/> <span>IPv4 supplémentaire <em>+1,00€/mois</em></span></label>
+      </div>
+    </div>
+    <div class="calc-result">
+      <div>
+        <div class="cspec"><span class="cspec-l">vCPU</span><span class="cspec-v" id="rCpu">2 vCPU</span></div>
+        <div class="cspec"><span class="cspec-l">RAM</span><span class="cspec-v" id="rRam">4 Go</span></div>
+        <div class="cspec"><span class="cspec-l">SSD</span><span class="cspec-v" id="rSsd">50 Go</span></div>
+        <div class="cspec"><span class="cspec-l">Réseau</span><span class="cspec-v">1 Gbit/s</span></div>
+      </div>
+      <div class="price-box">
+        <p class="price-lbl">Estimation mensuelle</p>
+        <div class="price-total"><span id="calcP">3,99</span><span>€/mois</span></div>
+        <p class="price-ann">soit <b id="calcA">47,88</b>€/an</p>
+      </div>
+      <a href="order.html" class="btn-prim" style="text-align:center;display:block">Commander cette config</a>
+    </div>
+  </div>
+</section>
+
+<!-- VERSUS -->
+<section class="versus">
+  <div class="sh"><p class="tag">Comparatif</p><h2>NexaHost vs la concurrence</h2><p>Pourquoi choisir NexaHost plutôt qu'OVH, Hetzner ou Contabo ?</p></div>
+  <div class="vs-wrap">
+    <div class="vs-tbl-wrap">
+      <table class="vs-tbl">
+        <thead><tr><th>Critère</th><th class="us">NexaHost ⭐</th><th>OVH</th><th>Hetzner</th><th>Contabo</th></tr></thead>
+        <tbody>
+          <tr><td>Prix entrée de gamme</td><td class="us win">1,99€/mois</td><td>3,50€/mois</td><td>3,49€/mois</td><td>4,99€/mois</td></tr>
+          <tr><td>Déploiement</td><td class="us win">⚡ 60 secondes</td><td>~5 minutes</td><td>~2 minutes</td><td>~10 minutes</td></tr>
+          <tr><td>DDoS Protection</td><td class="us win">✅ Incluse</td><td>✅ Incluse</td><td>⚠️ Basique</td><td>⚠️ Payante</td></tr>
+          <tr><td>Support 24/7</td><td class="us win">✅ Réactif</td><td>⚠️ Lent</td><td>✅ Bon</td><td>⚠️ Limité</td></tr>
+          <tr><td>Stockage NVMe</td><td class="us win">✅ 100% NVMe</td><td>⚠️ Selon offre</td><td>✅ NVMe</td><td>⚠️ HDD/SSD</td></tr>
+          <tr><td>Datacenter FR</td><td class="us win">✅ Paris</td><td>✅ Roubaix</td><td>❌ Non</td><td>❌ Non</td></tr>
+          <tr><td>Sans engagement</td><td class="us win">✅ Oui</td><td>✅ Oui</td><td>✅ Oui</td><td>⚠️ Min. 1 mois</td></tr>
+          <tr><td>Snapshots inclus</td><td class="us win">✅ Dès Confort</td><td>⚠️ Payants</td><td>✅ Inclus</td><td>❌ Non</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="vs-cta">
+      <p>🏆 NexaHost offre le meilleur rapport qualité/prix avec un déploiement instantané et un support humain réactif.</p>
+      <a href="order.html" class="btn-prim">Essayer NexaHost →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRO -->
+<section class="pro-s" id="pro">
+  <div class="pro-glow"></div>
+  <div class="sh"><p class="tag gold">Professionnels</p><h2>Solutions entreprise</h2><p>SLA garanti, infrastructure dédiée et support prioritaire.</p></div>
+  <div class="grid g3">
+    <div class="card gold-c">
+      <div><span class="ctag c4">Dédié</span><h3>Business</h3><p class="card-desc">Serveur physique dédié pour PME et startups.</p></div>
+      <div class="price"><span class="amt">49,99€</span><span class="per">/mois</span></div>
+      <ul class="feats"><li><span class="ok">✓</span>8 cœurs dédiés</li><li><span class="ok">✓</span>32 Go RAM ECC</li><li><span class="ok">✓</span>500 Go NVMe</li><li><span class="ok">✓</span>SLA 99.9%</li><li><span class="ok">✓</span>Support prioritaire</li></ul>
+      <a href="order.html?plan=business" class="btn-card gold-btn">Commander</a>
+    </div>
+    <div class="card gold-c" style="border-color:var(--yellow);box-shadow:0 0 28px rgba(245,158,11,.15)">
+      <div class="cbadge gold-b">🚀 Recommandé</div>
+      <div><span class="ctag c4">Dédié</span><h3>Enterprise</h3><p class="card-desc">Infrastructure HA pour applications critiques.</p></div>
+      <div class="price"><span class="amt">149,99€</span><span class="per">/mois</span></div>
+      <ul class="feats"><li><span class="ok">✓</span>32 cœurs dédiés</li><li><span class="ok">✓</span>128 Go RAM ECC</li><li><span class="ok">✓</span>2× 2 To NVMe RAID</li><li><span class="ok">✓</span>SLA 99.99%</li><li><span class="ok">✓</span>Support 24/7 dédié</li></ul>
+      <a href="order.html?plan=enterprise" class="btn-card gold-btn featured">Commander</a>
+    </div>
+    <div class="card gold-c">
+      <div><span class="ctag c4">Cloud</span><h3>Managed Cloud</h3><p class="card-desc">Infrastructure cloud managée, scalable.</p></div>
+      <div class="price"><span class="amt">Sur devis</span></div>
+      <ul class="feats"><li><span class="ok">✓</span>Kubernetes managé</li><li><span class="ok">✓</span>Load balancer inclus</li><li><span class="ok">✓</span>SLA 99.99%</li><li><span class="ok">✓</span>Account manager</li></ul>
+      <a href="#contact" class="btn-card gold-btn">Demander un devis</a>
+    </div>
+  </div>
+  <div class="pro-feats">
+    <div class="pf"><span class="pf-icon">🛡️</span><strong>DDoS Protection</strong><p>Protection jusqu'à 1 Tbit/s incluse sur tous les serveurs.</p></div>
+    <div class="pf"><span class="pf-icon">📞</span><strong>Support dédié</strong><p>Ingénieur senior disponible par téléphone ou Slack.</p></div>
+    <div class="pf"><span class="pf-icon">📊</span><strong>Monitoring 24/7</strong><p>Alertes proactives en temps réel sur votre infrastructure.</p></div>
+    <div class="pf"><span class="pf-icon">⚖️</span><strong>SLA contractuel</strong><p>Garantie de disponibilité avec pénalités contractuelles.</p></div>
+  </div>
+</section>
+
+<!-- DATACENTERS -->
+<section class="dc-s" id="dc">
+  <div class="sh"><p class="tag">Infrastructure</p><h2>Nos datacenters</h2><p>3 localisations en Europe pour une latence ultra-basse.</p></div>
+  <div class="map-wrap">
+    <svg class="emap" viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg">
+      <rect width="700" height="500" fill="var(--bg2)"/>
+      <path d="M210 200 L240 185 L270 190 L285 210 L275 240 L255 255 L230 250 L215 235Z" fill="#1a2240" stroke="#2a3560" stroke-width="1"/>
+      <path d="M290 170 L320 160 L345 170 L350 195 L335 215 L310 220 L290 205Z" fill="#1a2240" stroke="#2a3560" stroke-width="1"/>
+      <path d="M265 155 L290 150 L295 170 L275 175 L260 168Z" fill="#1a2240" stroke="#2a3560" stroke-width="1"/>
+      <path d="M175 145 L200 135 L210 150 L205 175 L185 180 L170 165Z" fill="#1a2240" stroke="#2a3560" stroke-width="1"/>
+      <path d="M300 225 L325 220 L335 245 L320 275 L305 265 L295 245Z" fill="#1a2240" stroke="#2a3560" stroke-width="1"/>
+      <path d="M345 160 L390 155 L400 175 L385 195 L355 198 L340 182Z" fill="#1a2240" stroke="#2a3560" stroke-width="1"/>
+      <path d="M280 80 L310 65 L330 80 L325 120 L300 130 L280 115Z" fill="#1a2240" stroke="#2a3560" stroke-width="1"/>
+      <line x1="248" y1="225" x2="318" y2="190" stroke="var(--accent)" stroke-width="1" stroke-dasharray="4 3" opacity="0.3"/>
+      <line x1="248" y1="225" x2="278" y2="162" stroke="var(--accent)" stroke-width="1" stroke-dasharray="4 3" opacity="0.3"/>
+      <line x1="318" y1="190" x2="278" y2="162" stroke="var(--accent)" stroke-width="1" stroke-dasharray="4 3" opacity="0.3"/>
+      <g class="dc-pt" data-city="Paris" data-country="France 🇫🇷" data-tier="Tier-3" data-lat="~2ms" data-cap="12 000 serveurs" transform="translate(248,225)">
+        <circle class="dc-ring" r="18" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.5"/>
+        <circle class="dc-ring2" r="26" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.25"/>
+        <circle r="8" fill="var(--accent)" stroke="#000" stroke-width="2"/>
+        <text y="-14" text-anchor="middle" fill="var(--text)" font-size="11" font-family="Syne,sans-serif" font-weight="700">Paris</text>
+      </g>
+      <g class="dc-pt" data-city="Frankfurt" data-country="Allemagne 🇩🇪" data-tier="Tier-4" data-lat="~8ms" data-cap="18 000 serveurs" transform="translate(318,190)">
+        <circle class="dc-ring" r="18" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.5"/>
+        <circle class="dc-ring2" r="26" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.25"/>
+        <circle r="8" fill="var(--accent)" stroke="#000" stroke-width="2"/>
+        <text y="-14" text-anchor="middle" fill="var(--text)" font-size="11" font-family="Syne,sans-serif" font-weight="700">Frankfurt</text>
+      </g>
+      <g class="dc-pt" data-city="Amsterdam" data-country="Pays-Bas 🇳🇱" data-tier="Tier-3" data-lat="~5ms" data-cap="10 000 serveurs" transform="translate(278,162)">
+        <circle class="dc-ring" r="18" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.5"/>
+        <circle class="dc-ring2" r="26" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.25"/>
+        <circle r="8" fill="var(--accent)" stroke="#000" stroke-width="2"/>
+        <text y="-14" text-anchor="middle" fill="var(--text)" font-size="11" font-family="Syne,sans-serif" font-weight="700">Amsterdam</text>
+      </g>
+    </svg>
+    <div class="dc-tip" id="dc-tip">
+      <div class="dct-city" id="dct-city"></div>
+      <div class="dct-country" id="dct-country"></div>
+      <div class="dct-row"><span>Tier</span><span id="dct-tier"></span></div>
+      <div class="dct-row"><span>Latence</span><span id="dct-lat"></span></div>
+      <div class="dct-row"><span>Capacité</span><span id="dct-cap"></span></div>
+      <div class="dct-row"><span>Statut</span><span class="dct-ok">✅ Opérationnel</span></div>
+    </div>
+  </div>
+  <div class="dc-cards">
+    <div class="dc-card"><div class="dc-flag">🇫🇷</div><div><strong>Paris, France</strong><p>Tier-3 • ~2ms</p></div><span class="dc-ok">✅ En ligne</span></div>
+    <div class="dc-card"><div class="dc-flag">🇩🇪</div><div><strong>Frankfurt, Allemagne</strong><p>Tier-4 • ~8ms</p></div><span class="dc-ok">✅ En ligne</span></div>
+    <div class="dc-card"><div class="dc-flag">🇳🇱</div><div><strong>Amsterdam, Pays-Bas</strong><p>Tier-3 • ~5ms</p></div><span class="dc-ok">✅ En ligne</span></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-s">
+  <div class="sh"><p class="tag">FAQ</p><h2>Questions fréquentes</h2></div>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-q">Comment activer mon serveur ? <span class="faq-arr">▼</span></button><div class="faq-a"><p>Votre serveur est activé automatiquement dans les 60 secondes suivant le paiement. Vous recevez vos identifiants par email.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Puis-je changer d'offre ? <span class="faq-arr">▼</span></button><div class="faq-a"><p>Oui, upgrade ou downgrade à tout moment depuis votre espace client. La différence est calculée au prorata.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Quels OS sont disponibles ? <span class="faq-arr">▼</span></button><div class="faq-a"><p>Ubuntu, Debian, CentOS, AlmaLinux, Windows Server. Installation en un clic depuis votre panel.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Y a-t-il un engagement ? <span class="faq-arr">▼</span></button><div class="faq-a"><p>Non. Les offres particuliers sont sans engagement. Résiliez à tout moment depuis votre espace client.</p></div></div>
+    <div class="faq-item"><button class="faq-q">La protection DDoS est incluse ? <span class="faq-arr">▼</span></button><div class="faq-a"><p>Oui, protection DDoS de base (100 Gbit/s) incluse sur tous nos serveurs sans surcoût.</p></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-s" id="contact">
+  <div class="sh"><p class="tag">Contact</p><h2>Une question ? Écrivez-nous</h2><p>Notre équipe vous répond sous 24h.</p></div>
+  <div class="contact-wrap">
+    <div class="c-info">
+      <div class="ci"><span class="ci-icon">📧</span><div><strong>Email</strong><p>support@nexahost.fr</p></div></div>
+      <div class="ci"><span class="ci-icon">💬</span><div><strong>Discord</strong><p>discord.gg/nexahost</p></div></div>
+      <div class="ci"><span class="ci-icon">🏢</span><div><strong>Commercial Pro</strong><p>pro@nexahost.fr</p></div></div>
+      <div class="ci"><span class="ci-icon">🕐</span><div><strong>Disponibilité</strong><p>24h/24 — 7j/7</p></div></div>
+    </div>
+    <form class="c-form" id="cform" novalidate>
+      <div class="form-row">
+        <div class="fg"><label>Nom</label><input type="text" placeholder="Jean Dupont" required/></div>
+        <div class="fg"><label>Email</label><input type="email" placeholder="jean@exemple.fr" required/></div>
+      </div>
+      <div class="fg"><label>Type de demande</label>
+        <select required><option value="" disabled selected>Choisir...</option><option>Question offre particulier</option><option>Question offre pro</option><option>Support technique</option><option>Demande de devis</option><option>Autre</option></select>
+      </div>
+      <div class="fg"><label>Message</label><textarea rows="4" placeholder="Décrivez votre demande..." required></textarea></div>
+      <div class="promo-row">
+        <div class="fg"><label>Code promo</label><input type="text" id="promo-in" placeholder="Ex: NEXA20" style="text-transform:uppercase"/></div>
+        <button type="button" class="btn-promo" id="promo-btn">Appliquer</button>
+      </div>
+      <div class="promo-res" id="promo-res"></div>
+      <button type="submit" class="btn-prim" style="width:100%">Envoyer le message</button>
+      <p class="form-ok" id="form-ok">✅ Message envoyé ! Nous vous répondrons bientôt.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand"><span class="logo">Nexa<span>Host</span></span><p>Infrastructure haute performance,<br/>disponible pour tous.</p></div>
+    <div class="foot-col"><strong>Particuliers</strong><a href="#offres">VPS</a><a href="#offres">Game Server</a><a href="#offres">Stockage</a><a href="order.html">Commander</a></div>
+    <div class="foot-col"><strong>Ressources</strong><a href="blog.html">Blog</a><a href="ping.html">Ping Checker</a><a href="panel.html">Espace client</a><a href="status.html">Statut</a></div>
+    <div class="foot-col"><strong>Légal</strong><a href="cgv.html">CGV</a><a href="mentions-legales.html">Mentions légales</a></div>
+  </div>
+  <div class="foot-bottom">© 2025 NexaHost. Tous droits réservés. — Hébergé en France 🇫🇷</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

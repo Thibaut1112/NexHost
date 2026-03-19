@@ -1,0 +1,12 @@
+# robots.txt — NexaHost
+# https://nexahost.fr
+
+User-agent: *
+Allow: /
+
+# Disallow private/client areas
+Disallow: /panel.html
+Disallow: /order.html
+
+# Sitemap location
+Sitemap: https://nexahost.fr/sitemap.xml

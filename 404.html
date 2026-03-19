@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexaHost — 404</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .page-404{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5%;position:relative;overflow:hidden}
+    .page-404 .hero-bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,229,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,.03) 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
+    .err-code{font-size:clamp(6rem,18vw,14rem);font-weight:800;line-height:1;letter-spacing:-6px;background:linear-gradient(120deg,var(--accent) 0%,#818cf8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:float 3s ease-in-out infinite}
+    .err-title{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;margin-bottom:12px}
+    .err-sub{color:var(--muted);font-size:1rem;margin-bottom:36px;max-width:480px;line-height:1.7}
+    .err-links{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .terminal{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;font-family:var(--mono);font-size:.82rem;text-align:left;max-width:420px;width:100%;margin:32px auto}
+    .terminal-line{display:flex;gap:8px;margin-bottom:6px}
+    .terminal-line span:first-child{color:var(--accent)}
+    .terminal-line span:last-child{color:var(--muted)}
+    .terminal-cursor{display:inline-block;width:8px;height:14px;background:var(--accent);animation:blink 1s infinite;vertical-align:text-bottom}
+  </style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Nexa<span>Host</span></a>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Thème">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="page-404">
+  <div class="hero-bg-grid"></div>
+  <div class="err-code">404</div>
+  <h1 class="err-title">Page introuvable</h1>
+  <p class="err-sub">Oups ! Cette page n'existe pas ou a été déplacée. Peut-être que votre serveur tourne encore, mais cette URL, non.</p>
+  <div class="terminal">
+    <div class="terminal-line"><span>$</span><span>curl https://nexahost.fr<span style="color:var(--red);">/cette-page</span></span></div>
+    <div class="terminal-line"><span>!</span><span style="color:var(--red);">HTTP 404 — Not Found</span></div>
+    <div class="terminal-line"><span>$</span><span>cd /home && ls</span></div>
+    <div class="terminal-line"><span>→</span><span style="color:var(--green);">index.html  offres/  panel/  blog/</span></div>
+    <div class="terminal-line"><span>$</span><span><span class="terminal-cursor"></span></span></div>
+  </div>
+  <div class="err-links">
+    <a href="index.html" class="btn-primary">🏠 Retour à l'accueil</a>
+    <a href="index.html#particuliers" class="btn-ghost">Voir les offres</a>
+    <a href="index.html#contact" class="btn-ghost">Support</a>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

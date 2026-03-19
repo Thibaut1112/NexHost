@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexaHost — Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="loader"><div class="loader-logo">Nexa<span>Host</span></div><div class="loader-ring"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28"/><circle class="arc" cx="32" cy="32" r="28"/></svg></div><div class="loader-bar"><div class="loader-fill"></div></div><div class="loader-text">Chargement...</div></div>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Nexa<span>Host</span></a>
+  <ul class="nav-links"><li><a href="index.html">Accueil</a></li><li><a href="index.html#particuliers">Offres</a></li><li><a href="index.html#contact">Contact</a></li></ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Thème">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a href="order.html" class="btn-nav">Commander</a>
+  </div>
+</nav>
+
+<main class="blog-page">
+  <div class="section-header" style="padding-top:calc(var(--nav-h) + 40px)">
+    <p class="section-tag">Blog</p>
+    <h2>Guides & actualités</h2>
+    <p class="section-sub">Tutoriels, conseils d'hébergement et actualités NexaHost.</p>
+  </div>
+
+  <div class="blog-grid">
+    <!-- Article featured -->
+    <div class="blog-card blog-featured reveal">
+      <div class="blog-img" style="background:linear-gradient(135deg,#0d1117,#1a2240)">🚀</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Guide</span><span class="blog-date">15 décembre 2025</span><span class="blog-date">• 8 min de lecture</span></div>
+        <h3>Comment choisir le bon VPS en 2025 : guide complet pour débutants</h3>
+        <p>CPU, RAM, SSD NVMe, bande passante... Tous les critères expliqués simplement pour choisir l'offre VPS adaptée à votre projet, qu'il s'agisse d'un site web, d'un bot ou d'une application.</p>
+        <span class="blog-read">Lire l'article →</span>
+      </div>
+    </div>
+
+    <div class="blog-card reveal">
+      <div class="blog-img" style="background:linear-gradient(135deg,#0a1628,#1e3a5f)">🐳</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Tutoriel</span><span class="blog-date">8 décembre 2025</span></div>
+        <h3>Installer Docker sur Ubuntu 24.04 en 5 minutes</h3>
+        <p>Guide pas à pas pour installer Docker et Docker Compose sur votre VPS Ubuntu, avec les commandes essentielles pour démarrer.</p>
+        <span class="blog-read">Lire →</span>
+      </div>
+    </div>
+
+    <div class="blog-card reveal">
+      <div class="blog-img" style="background:linear-gradient(135deg,#0f1a0a,#1a3a10)">🔒</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Sécurité</span><span class="blog-date">2 décembre 2025</span></div>
+        <h3>Sécuriser son VPS : les 10 règles essentielles</h3>
+        <p>Fail2ban, UFW, SSH sans mot de passe, mises à jour automatiques... Tout ce qu'il faut faire dès la création de votre serveur.</p>
+        <span class="blog-read">Lire →</span>
+      </div>
+    </div>
+
+    <div class="blog-card reveal">
+      <div class="blog-img" style="background:linear-gradient(135deg,#1a0a0a,#3a1010)">🎮</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Gaming</span><span class="blog-date">25 novembre 2025</span></div>
+        <h3>Créer un serveur Minecraft Spigot avec mods : tutoriel complet</h3>
+        <p>De l'installation Java à la configuration des plugins en passant par l'optimisation des performances pour 50+ joueurs.</p>
+        <span class="blog-read">Lire →</span>
+      </div>
+    </div>
+
+    <div class="blog-card reveal">
+      <div class="blog-img" style="background:linear-gradient(135deg,#0a0a1a,#10103a)">☸️</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">DevOps</span><span class="blog-date">18 novembre 2025</span></div>
+        <h3>Déployer une app Node.js avec PM2 et NGINX en reverse proxy</h3>
+        <p>Mettez votre application en production proprement avec PM2 pour la gestion des processus et NGINX comme reverse proxy avec SSL.</p>
+        <span class="blog-read">Lire →</span>
+      </div>
+    </div>
+
+    <div class="blog-card reveal">
+      <div class="blog-img" style="background:linear-gradient(135deg,#0a1a0f,#103a20)">📊</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Performance</span><span class="blog-date">10 novembre 2025</span></div>
+        <h3>SSD NVMe vs SATA : pourquoi ça change tout pour votre hébergement</h3>
+        <p>Comprendre la différence entre les types de stockage et pourquoi le NVMe est devenu indispensable pour les applications modernes.</p>
+        <span class="blog-read">Lire →</span>
+      </div>
+    </div>
+
+    <div class="blog-card reveal">
+      <div class="blog-img" style="background:linear-gradient(135deg,#1a0f0a,#3a2010)">🤖</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Tutoriel</span><span class="blog-date">3 novembre 2025</span></div>
+        <h3>Héberger un bot Discord avec Python sur VPS : guide complet</h3>
+        <p>De la création du bot à son déploiement en production avec systemd pour qu'il reste actif 24/7, même après un redémarrage.</p>
+        <span class="blog-read">Lire →</span>
+      </div>
+    </div>
+
+    <div class="blog-card reveal">
+      <div class="blog-img" style="background:linear-gradient(135deg,#0d0a1a,#1a1040)">🌐</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Réseau</span><span class="blog-date">28 octobre 2025</span></div>
+        <h3>DDoS : comment ça marche et comment s'en protéger ?</h3>
+        <p>Explication claire des attaques par déni de service distribué et des solutions de protection disponibles chez NexaHost.</p>
+        <span class="blog-read">Lire →</span>
+      </div>
+    </div>
+
+    <div class="blog-card reveal">
+      <div class="blog-img" style="background:linear-gradient(135deg,#0a1a15,#103a28)">💾</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Actualité</span><span class="blog-date">20 octobre 2025</span></div>
+        <h3>NexaHost ouvre un nouveau datacenter à Amsterdam</h3>
+        <p>Notre infrastructure s'agrandit avec l'ouverture d'un datacenter Tier-3 en Europe du Nord pour mieux servir nos clients.</p>
+        <span class="blog-read">Lire →</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="nav-logo">Nexa<span>Host</span></span><p>Infrastructure haute performance,<br/>disponible pour tous.</p></div>
+    <div class="footer-links"><strong>Navigation</strong><a href="index.html">Accueil</a><a href="index.html#particuliers">Offres</a><a href="index.html#contact">Contact</a></div>
+    <div class="footer-links"><strong>Légal</strong><a href="cgv.html">CGV</a><a href="mentions-legales.html">Mentions légales</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 NexaHost. Tous droits réservés.</p></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
